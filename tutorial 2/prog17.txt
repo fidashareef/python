@@ -1,0 +1,21 @@
+17)Write a Python program to find the value for sin(x) up to n terms using the series sin(x)=1-x^3/3!+x^5/5!..... ( sin(x) = ((-1)^n/(2n+1)!)x^(2n+1) )
+
+
+
+
+import math
+
+def sin_x_series(x, n_terms):
+    sin_x = 0
+    for n in range(n_terms):
+    
+        term = ((-1) ** n) * (x ** (2 * n + 1)) / math.factorial(2 * n + 1)
+        sin_x += term
+    return sin_x
+
+x = float(input("Enter the value of x (in radians): "))
+n_terms = int(input("Enter the number of terms for the series expansion: "))
+
+result = sin_x_series(x, n_terms)
+
+print(f"The value of sin({x}) using {n_terms} terms is: {result}")

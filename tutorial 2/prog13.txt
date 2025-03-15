@@ -1,0 +1,17 @@
+13)Write Python script for converting Binary number into decimal number.
+
+
+
+
+def binary_to_decimal(binary_number):
+
+    decimal_number = int(binary_number, 2)
+    return decimal_number
+
+
+user_binary = input("Enter a binary number: ")
+
+
+decimal_result = binary_to_decimal(user_binary)
+
+print(f"The decimal representation of binary {user_binary} is: {decimal_result}")

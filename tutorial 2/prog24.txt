@@ -1,0 +1,22 @@
+24)Finding the mode of list of numbers(A number that appears most often is the mode.)
+
+
+
+from collections import Counter
+
+def find_mode():
+ 
+    numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+    
+    freq_dict = Counter(numbers)
+    
+    max_freq = max(freq_dict.values())
+
+    mode = [key for key, value in freq_dict.items() if value == max_freq]
+    
+    print(f"The mode(s) is/are: {mode}")
+
+find_mode()
+
+
+

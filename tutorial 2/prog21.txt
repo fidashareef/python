@@ -1,0 +1,22 @@
+1)Program to find the sum of all even numbers in a group of n numbers entered
+by the user.
+
+
+
+def sum_of_even_numbers():
+
+    n = int(input("Enter the number of elements: "))
+    
+    
+    sum_even = 0
+    
+    
+    for _ in range(n):
+        num = int(input("Enter a number: "))
+        if num % 2 == 0:
+            sum_even += num
+    
+   
+    print(f"The sum of all even numbers is: {sum_even}")
+
+sum_of_even_numbers()

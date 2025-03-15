@@ -1,0 +1,27 @@
+9)Write a Program to reverse the first and second half of a string separately.
+
+
+def reverse_halves(input_string):
+ 
+    mid = len(input_string) // 2
+
+   
+    first_half = input_string[:mid]
+    second_half = input_string[mid:]
+
+
+    reversed_first_half = first_half[::-1]
+    reversed_second_half = second_half[::-1]
+
+    
+    result = reversed_first_half + reversed_second_half
+    return result
+
+
+user_input = input("Enter a string: ")
+
+
+modified_string = reverse_halves(user_input)
+
+
+print("String after reversing first and second halves:", modified_string)

@@ -1,0 +1,30 @@
+11)Write a Python program to check the validity of a password given by the user
+
+
+
+import re
+
+def check_password_validity(password):
+    
+    if len(password) < 6:
+        return "Password must be at least 6 characters long."
+
+    if not re.search("[a-z]", password):
+        return "Password must contain at least one lowercase letter."
+
+    if not re.search("[A-Z]", password):
+        return "Password must contain at least one uppercase letter."
+
+    if not re.search("[0-9]", password):
+        return "Password must contain at least one digit."
+
+    if not re.search("[@#$%^&+=]", password):
+        return "Password must contain at least one special character (@, #, $, %, ^, &, +, =)."
+
+    return "Password is valid."
+
+user_password = input("Enter a password: ")
+
+validation_result = check_password_validity(user_password)
+
+print(validation_result)

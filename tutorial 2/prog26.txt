@@ -1,0 +1,35 @@
+26)Consider a list consisting of integers, floating point numbers and strings.Separate them into different lists depending on the data
+
+
+
+
+
+def separate_data_types():
+  
+  
+    mixed_list = input("Enter elements (integers, floats, and strings) separated by space: ").split()
+    
+
+    int_list = []
+    float_list = []
+    str_list = []
+    
+  
+    for item in mixed_list:
+        try:
+       
+            if '.' in item:
+                float_list.append(float(item))  
+            else:
+                int_list.append(int(item))  
+                
+        except ValueError:
+            
+            str_list.append(item)
+
+   
+    print("Integers:", int_list)
+    print("Floats:", float_list)
+    print("Strings:", str_list)
+
+separate_data_types()

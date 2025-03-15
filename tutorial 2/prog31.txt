@@ -1,0 +1,17 @@
+31)Program to completely remove duplicate elements without keeping any copy.
+
+
+def remove_all_duplicates(lst):
+    from collections import Counter
+    
+    element_counts = Counter(lst)
+    
+  
+    unique_list = [item for item in lst if element_counts[item] == 1]
+    
+    return unique_list
+
+numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+
+
+print("List after removing all duplicates:", remove_all_duplicates(numbers))

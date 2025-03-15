@@ -1,0 +1,18 @@
+5)Write a program to slice the string into two separate strings; one with all the
+characters in the odd indices and one with all characters in even indices.
+
+
+def slice_string(input_string):
+    even_indices = input_string[::2] 
+    
+    odd_indices = input_string[1::2]  
+    return even_indices, odd_indices
+
+user_input = input("Enter a string: ")
+
+
+even_chars, odd_chars = slice_string(user_input)
+
+
+print("Characters at even indices:", even_chars)
+print("Characters at odd indices:", odd_chars)

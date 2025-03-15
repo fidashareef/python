@@ -1,0 +1,16 @@
+2)Write a program to remove characters at odd index positions from a string.
+
+
+
+def remove_odd_index(string):
+    result = "".join([char for index, char in enumerate(string) if index % 2 == 0])
+    return result
+
+
+user_input = input("Enter a string: ")
+
+
+modified_string = remove_odd_index(user_input)
+
+
+print("String after removing characters at odd index positions:", modified_string)
