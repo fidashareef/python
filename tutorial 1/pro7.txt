@@ -1,0 +1,24 @@
+7)Program to input a point and find the quadrant.
+
+
+def find_quadrant(x, y):
+    if x > 0 and y > 0:
+        print("The point is in Quadrant I.")
+    elif x < 0 and y > 0:
+        print("The point is in Quadrant II.")
+    elif x < 0 and y < 0:
+        print("The point is in Quadrant III.")
+    elif x > 0 and y < 0:
+        print("The point is in Quadrant IV.")
+    elif x == 0 and y == 0:
+        print("The point is at the Origin.")
+    elif x == 0:
+        print("The point lies on the Y-axis.")
+    else:
+        print("The point lies on the X-axis.")
+
+x = float(input("Enter the x-coordinate: "))
+y = float(input("Enter the y-coordinate: "))
+
+
+find_quadrant(x, y)

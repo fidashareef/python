@@ -1,0 +1,25 @@
+6)Program that accepts the length of three sides of a triangle as input and determine whether or not the triangle is a right angled triangle.
+
+
+
+def check_right_triangle(a, b, c):
+ 
+    sides = sorted([a, b, c])
+    x, y, hypotenuse = sides  
+
+
+    if x**2 + y**2 == hypotenuse**2:
+        print("The given triangle is a right-angled triangle.")
+    else:
+        print("The given triangle is not a right-angled triangle.")
+
+
+a = float(input("Enter the first side: "))
+b = float(input("Enter the second side: "))
+c = float(input("Enter the third side: "))
+
+
+if a + b > c and a + c > b and b + c > a:
+    check_right_triangle(a, b, c)
+else:
+    print("The given sides do not form a valid triangle.")

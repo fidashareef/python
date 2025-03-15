@@ -1,0 +1,15 @@
+1) Write a python program to input a time in seconds and print the time in
+   HH:MM:SS format.
+
+
+def realtime(seconds):
+    hours = seconds // 3600  
+    seconds %= 3600
+    minutes = seconds // 60
+    seconds %= 60
+    return f"{hours:02}:{minutes:02}:{seconds:02}"
+
+time = int(input("Enter time in seconds: "))
+
+new_time = realtime(time)
+print(f"Time in HH:MM:SS format: {new_time}")
